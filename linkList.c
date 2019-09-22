@@ -15,22 +15,6 @@ int createSrand(int count, int range){
     return rand() % range;
 }
 
-link *creatLink(){
-
-    link *head, *node, *end;
-    head = (link*)malloc(sizeof(link));
-    end = head;
-    for(int i=0; i<N; i++){
-        node = (link*)malloc(sizeof(link));
-        node->elem = createSrand(N, 50);
-        end->next = node;
-        end = node;
-    }
-    end->next = NULL;
-    return head;
-
-}
-
 void printLink(link *list){
     link *temp = list;
     printf("\nlink-table is\n");
@@ -50,6 +34,23 @@ int getLength(link *list){
     }
     return length;
 }
+
+link *creatLink(){
+
+    link *head, *node, *end;
+    head = (link*)malloc(sizeof(link));
+    end = head;
+    for(int i=0; i<N; i++){
+        node = (link*)malloc(sizeof(link));
+        node->elem = createSrand(N, 50);
+        end->next = node;
+        end = node;
+    }
+    end->next = NULL;
+    return head;
+
+}
+
 
 
 link *insertLink(link *list){
@@ -141,9 +142,7 @@ int main(){
     case 4:
         selectLink(p);
         break;
-    case 5:
-        createSrand(10,50);
-        break;
+
     default:
         break;
     }
