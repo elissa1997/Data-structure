@@ -153,7 +153,33 @@ duLNode *selectLink(duLNode *list){
 int main(){
 
     duLNode *p = createLink();
+    printf("random link-table is\n");
     printLink(p);
 
-    selectLink(p);
+    printf("select your option\n");
+    printf("1. insert value\n2. delete value\n3. change value\n4. query value\n");
+    int menu;
+    scanf("%d",&menu);
+    switch (menu)
+    {
+    case 1:
+        insertLink(p);
+        printLink(p);
+        break;
+    case 2:
+        delLink(p);
+        printLink(p);
+        break;
+    case 3:
+        updateLink(p);
+        printLink(p);
+        break;
+    case 4:
+        selectLink(p);
+        break;
+
+    default:
+        break;
+    }
+    
 }
