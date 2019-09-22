@@ -58,6 +58,8 @@ int main(){
     for (int i = 0; i < 10; i++)
     {
         popStack(stack);
+        printStack(stack);
+
     }
 
     printStack(stack);
