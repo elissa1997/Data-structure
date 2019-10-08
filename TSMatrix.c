@@ -68,7 +68,7 @@ int printMatrix(TSMatrix M){
     {
         for (int j = 0; j < COL; j++)
         {
-            if(i != M.data[count].i || j != M.data[count].j){
+            if(j != M.data[count].j){
                 printf(" 0 ");
             }else
             {
